@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- BOOTSTRAP AND CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <!--MOMENT.JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <title>Train Time!</title>
+</head>
+<!--Jumbotron-->
+  <body>
+    <div class="jumbotron text-center bg-dark text-white"> 
+        <h1>Train Time</h1>
+        <br>
+        <h2>Chuga Chug Choo Choo!</h2>
+    </div>
+
+<!--Current Train Schedule-->
+    <div class="container">
+        <div class="card bg-info">
+            <div class="card-header text-white">Current Train Schedule</div>
+                <table class="table-dark">
+                    <thead class="thead">
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency (min)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="displayTable">                            
+                    <!-- Dynamic Content -->
+                    </tbody>
+                </table> 
+        </div>       
+    </div>
+
+    <br>
+<!--Add Train-->
+    <div class="container">
+        <div class="card text-white bg-dark">
+            <div class="card-header bg-info"> Add Train</div>
+            <form id="form">
+
+                <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="text" class="form-control" id="trainName">
+                </div>
+
+                <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" class="form-control" id="destination">
+                </div>
+
+                <div class="form-group">
+                <label for="firstTrain">First Train Time (HH:mm - military time)</label>
+                <input class="form-control" type="text" id="firstTrain">
+                </div>
+
+                <div class="form-group">
+                <label for="frequency">Frequency (min)</label>
+                <input type="number" class="form-control" id="frequency">
+                </div>
+
+                <button type="submit" class="btn" id="submitbtn">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+
+<!-- Scripts -->
+    <!-- JS and JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--Custom JS-->
+    <script src="app.js"></script>
+    
+  </body>
+</html>
